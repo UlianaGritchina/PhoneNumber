@@ -1,24 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mobile Number View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MobileNumberViewController" customModule="PhoneNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZ9-C2-Ocf">
+                                <rect key="frame" x="16" y="406.66666666666669" width="361" height="64"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZPC-cn-lP1">
+                                        <rect key="frame" x="8" y="15" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="0.60262313741721851" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZPC-cn-lP1" firstAttribute="leading" secondItem="rZ9-C2-Ocf" secondAttribute="leading" constant="8" id="Hvi-cR-RGT"/>
+                                    <constraint firstItem="ZPC-cn-lP1" firstAttribute="leading" secondItem="rZ9-C2-Ocf" secondAttribute="leadingMargin" id="Ib3-Sz-Vam"/>
+                                    <constraint firstItem="ZPC-cn-lP1" firstAttribute="centerY" secondItem="rZ9-C2-Ocf" secondAttribute="centerY" id="WBE-rm-ib7"/>
+                                    <constraint firstAttribute="width" secondItem="rZ9-C2-Ocf" secondAttribute="height" multiplier="361:64" id="hEu-eC-h25"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZPC-cn-lP1" secondAttribute="trailing" constant="8" id="meB-HC-dGP"/>
+                                    <constraint firstItem="ZPC-cn-lP1" firstAttribute="trailing" secondItem="rZ9-C2-Ocf" secondAttribute="trailingMargin" id="sMP-sM-SOx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rZ9-C2-Ocf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VRw-Tp-JJI"/>
+                            <constraint firstItem="rZ9-C2-Ocf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.918575" id="fa1-TI-R5i"/>
+                            <constraint firstItem="rZ9-C2-Ocf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="smd-Oj-jJZ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="mobileNumberTF" destination="ZPC-cn-lP1" id="wCC-Cy-JIi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
